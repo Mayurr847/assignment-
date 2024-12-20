@@ -1,0 +1,43 @@
+.list-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #d5edb1; /* background */
+    border: 2px solid #a9cf74; 
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-container h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4c823d; 
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .list-container ul {
+    list-style: none; 
+    padding: 0;
+  }
+  
+  .list-container li {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9; 
+    border: 1px solid #c2e09a; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: #4c823d;
+  }
+  
+  .list-container li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #4c823d;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
