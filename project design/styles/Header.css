@@ -1,0 +1,197 @@
+/* General Sidebar Styles */
+.sidebar {
+  --color-primary: linear-gradient(-45deg, #4651ca, #5e6bff);
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  bottom: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 80px;
+  background: #1d1d2b;
+  border-radius: 18px;
+  transition: width 0.4s ease-in-out;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px;
+}
+
+/* .left img {
+  width: 50px;
+  margin-bottom: 20px;
+} */
+
+.left img {
+  width: 50px; /* Slightly larger size for better proportions */
+  height: 50px; /* Equal width and height for a circular shape */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits perfectly within the circular frame */
+  margin-bottom: 20px;
+  border: 2px solid #ffffff; /* Optional border for better visibility */
+}
+
+
+/* Menu Items */
+.menu-item {
+  margin-bottom: 16px;
+  padding: 6px;
+}
+
+.menu-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f9f9f9;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-item a i {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  font-size: 20px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-item a span {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  white-space: nowrap;
+}
+
+/* Hover Effects */
+.menu-item a:hover i {
+  background: var(--color-primary);
+  color: rgb(245, 244, 244);
+}
+
+.menu-item a:hover {
+  color: white;
+}
+
+.sidebar:hover {
+  width: 300px;
+}
+
+.sidebar:hover .menu-item a span {
+  opacity: 1;
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Adjust based on your portfolio's font */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal label {
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal input:focus {
+  border-color: #0078ff; /* Accent color (adjust as needed) */
+  outline: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0078ff; /* Accent color */
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: #005fcc; /* Darker shade of the accent color */
+}
+
+.modal-buttons button:nth-child(2) {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal-buttons button:nth-child(2):hover {
+  background-color: #bbb;
+}
+
+/* Error Message */
+p.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
